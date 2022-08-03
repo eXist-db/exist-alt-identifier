@@ -1,5 +1,7 @@
 package org.exist.uuid;
 
+import com.github.f4b6a3.ulid.*;
+
 import org.exist.xquery.BasicFunction;
 import org.exist.xquery.FunctionSignature;
 import org.exist.xquery.XPathException;
@@ -31,6 +33,14 @@ public class UUIDFunctions extends BasicFunction {
         null
     );
 
+    private static final String FS_ULID_NAME = "ulid";
+    static final FunctionSignature FS_ULID = functionSignature(
+            FS_ULID_NAME,
+            "Generates a Universally Unique Lexicographically Sortable Identifier (ULID).",
+            returns(Type.STRING),
+            null
+    );
+
     public UUIDFunctions(XQueryContext context, FunctionSignature signature) {
         super(context, signature);
     }
@@ -41,6 +51,9 @@ public class UUIDFunctions extends BasicFunction {
 
             case FS_SECURE_RANDOM_NAME:
                 return secureRandom();
+
+            case FS_ULID_NAME:
+                return ulid();
 
             default:
                 throw new XPathException(this, "No function: " + getName() + "#" + getSignature().getArgumentCount());
@@ -58,4 +71,16 @@ public class UUIDFunctions extends BasicFunction {
         String returnValue = encoder.encodeToString(buffer);
         return new StringValue(returnValue);
     }
+
+    /**
+     * Generates a 160-bit (20 byte) random value that is then URL-safe base64-encoded.
+     *
+     * @return A unique identifier string
+     */
+    private StringValue ulid() {
+        Ulid ulid = UlidCreator.getUlid();
+        String ulidString = ulid.toString();
+        return new StringValue(ulidString);
+    }
 }
+

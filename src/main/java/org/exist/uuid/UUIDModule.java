@@ -23,7 +23,8 @@ public class UUIDModule extends AbstractInternalModule {
     // register the functions of the module
     public static final FunctionDef[] functions = functionDefs(
         functionDefs(UUIDFunctions.class,
-                UUIDFunctions.FS_SECURE_RANDOM
+                UUIDFunctions.FS_SECURE_RANDOM,
+                UUIDFunctions.FS_ULID
         )
     );
 

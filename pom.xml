@@ -49,6 +49,7 @@
         <project.build.target>1.8</project.build.target>
 
         <exist.version>6.0.1</exist.version>
+        <ulid.version>5.0.0</ulid.version>
 
         <!-- used in the EXPath Package Descriptor -->
         <package-name>https://exist-db.org/xquery/uuid</package-name>
@@ -62,6 +63,12 @@
             <groupId>org.exist-db</groupId>
             <artifactId>exist-core</artifactId>
             <version>${exist.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.github.f4b6a3/ulid-creator -->
+        <dependency>
+            <groupId>com.github.f4b6a3</groupId>
+            <artifactId>ulid-creator</artifactId>
+            <version>${ulid.version}</version>
         </dependency>
 
         <!-- test dependencies -->
