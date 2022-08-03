@@ -1,4 +1,4 @@
-package org.exist.uuid;
+package org.exist.altid;
 
 import com.github.f4b6a3.ulid.*;
 
@@ -14,13 +14,13 @@ import java.security.SecureRandom;
 import java.util.Base64;
 
 import static org.exist.xquery.FunctionDSL.*;
-import static org.exist.uuid.UUIDModule.functionSignature;
+import static org.exist.altid.AltIDModule.functionSignature;
 
 /**
  * Some very simple XQuery example functions implemented
  * in Java.
  */
-public class UUIDFunctions extends BasicFunction {
+public class AltIDFunctions extends BasicFunction {
 
     private static final SecureRandom random = new SecureRandom();
     private static final Base64.Encoder encoder = Base64.getUrlEncoder().withoutPadding();
@@ -41,7 +41,7 @@ public class UUIDFunctions extends BasicFunction {
             null
     );
 
-    public UUIDFunctions(XQueryContext context, FunctionSignature signature) {
+    public AltIDFunctions(XQueryContext context, FunctionSignature signature) {
         super(context, signature);
     }
 

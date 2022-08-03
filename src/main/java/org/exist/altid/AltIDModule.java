@@ -1,4 +1,4 @@
-package org.exist.uuid;
+package org.exist.altid;
 
 import org.exist.dom.QName;
 import org.exist.xquery.*;
@@ -14,21 +14,21 @@ import static org.exist.xquery.FunctionDSL.functionDefs;
  * An XQuery Library Module for generting unique identifiers implemented
  * in Java.
  */
-public class UUIDModule extends AbstractInternalModule {
+public class AltIDModule extends AbstractInternalModule {
 
     public static final String NAMESPACE_URI = "https://exist-db.org/xquery/uuid";
-    public static final String PREFIX = "uuid";
-    public static final String RELEASED_IN_VERSION = "eXist-6.0.1";
+    public static final String PREFIX = "altid";
+    public static final String RELEASED_IN_VERSION = "eXist-6.0.0";
 
     // register the functions of the module
     public static final FunctionDef[] functions = functionDefs(
-        functionDefs(UUIDFunctions.class,
-                UUIDFunctions.FS_SECURE_RANDOM,
-                UUIDFunctions.FS_ULID
+        functionDefs(AltIDFunctions.class,
+                AltIDFunctions.FS_SECURE_RANDOM,
+                AltIDFunctions.FS_ULID
         )
     );
 
-    public UUIDModule(final Map<String, List<? extends Object>> parameters) {
+    public AltIDModule(final Map<String, List<? extends Object>> parameters) {
         super(functions, parameters);
     }
 

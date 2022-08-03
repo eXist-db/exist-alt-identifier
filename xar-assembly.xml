@@ -56,8 +56,8 @@
     <!-- register the Java module to eXist-db -->
     <components>
         <resource>
-            <public-uri>${uuid.module.namespace}</public-uri>
-            <file>urn:java:class:org.exist.uuid.${uuid.module.java.classname}</file>
+            <public-uri>${altid.module.namespace}</public-uri>
+            <file>urn:java:class:org.exist.altid.${altid.module.java.classname}</file>
         </resource>
     </components>
 

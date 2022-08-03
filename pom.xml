@@ -12,12 +12,12 @@
     </parent>
 
     <groupId>org.exist-db</groupId>
-    <artifactId>exist-alt-uuid</artifactId>
+    <artifactId>exist-alt-identifier</artifactId>
     <version>1.0</version>
 
-    <name>UUID Alternate Library</name>
-    <description>Library module for alternate randomly generated unique identifiers</description>
-    <url>https://exist-db.org/xquery/uuid</url>
+    <name>Alternate Unique Identifier Library</name>
+    <description>Library module for alternate generated unique identifiers</description>
+    <url>https://exist-db.org/xquery/altid</url>
 
     <organization>
         <name>eXist-db</name>
@@ -33,14 +33,14 @@
     </licenses>
 
     <scm>
-        <url>https://www.github.com/eXist-db/exist-alt-uuid.git</url>
-        <connection>scm:git:https://www.github.com/eXist-db/exist-alt-uuid.git</connection>
-        <developerConnection>scm:git:https://www.github.com/eXist-db/exist-alt-uuid.git</developerConnection>
+        <url>https://www.github.com/eXist-db/exist-alt-identifier.git</url>
+        <connection>scm:git:https://www.github.com/eXist-db/exist-alt-identifier.git</connection>
+        <developerConnection>scm:git:https://www.github.com/eXist-db/exist-alt-identifier.git</developerConnection>
     </scm>
 
     <issueManagement>
         <system>GitHub</system>
-        <url>https://www.github.com/eXist-db/exist-alt-uuid/issues</url>
+        <url>https://www.github.com/eXist-db/exist-alt-identifier/issues</url>
     </issueManagement>
 
     <properties>
@@ -48,14 +48,14 @@
         <project.build.source>1.8</project.build.source>
         <project.build.target>1.8</project.build.target>
 
-        <exist.version>6.0.1</exist.version>
+        <exist.version>6.0.0</exist.version>
         <ulid.version>5.0.0</ulid.version>
 
         <!-- used in the EXPath Package Descriptor -->
-        <package-name>https://exist-db.org/xquery/uuid</package-name>
+        <package-name>https://exist-db.org/xquery/altid</package-name>
 
-        <uuid.module.namespace>https://exist-db.org/xquery/uuid</uuid.module.namespace>
-        <uuid.module.java.classname>UUIDModule</uuid.module.java.classname>
+        <altid.module.namespace>https://exist-db.org/xquery/altid</altid.module.namespace>
+        <altid.module.java.classname>AltIDModule</altid.module.java.classname>
     </properties>
 
     <dependencies>
