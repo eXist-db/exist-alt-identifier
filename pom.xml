@@ -52,7 +52,7 @@
         <ulid.version>5.0.0</ulid.version>
 
         <!-- used in the EXPath Package Descriptor -->
-        <package-name>https://exist-db.org/xquery/altid</package-name>
+        <package-name>https://exist-db.org/xquery/lib/altid</package-name>
 
         <altid.module.namespace>https://exist-db.org/xquery/altid</altid.module.namespace>
         <altid.module.java.classname>AltIDModule</altid.module.java.classname>

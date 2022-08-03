@@ -16,7 +16,7 @@ import static org.exist.xquery.FunctionDSL.functionDefs;
  */
 public class AltIDModule extends AbstractInternalModule {
 
-    public static final String NAMESPACE_URI = "https://exist-db.org/xquery/uuid";
+    public static final String NAMESPACE_URI = "https://exist-db.org/xquery/altid";
     public static final String PREFIX = "altid";
     public static final String RELEASED_IN_VERSION = "eXist-6.0.0";
 
