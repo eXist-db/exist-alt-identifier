@@ -52,7 +52,7 @@ public class UUIDFunctions extends BasicFunction {
      *
      * @return A unique identifier string
      */
-    private StringValue secureRandom() throws XPathException {
+    private StringValue secureRandom() {
         byte[] buffer = new byte[20];
         random.nextBytes(buffer);
         String returnValue = encoder.encodeToString(buffer);

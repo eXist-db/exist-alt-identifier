@@ -50,8 +50,8 @@
     <!-- register the Java module to eXist-db -->
     <components>
         <resource>
-            <public-uri>${example.module.namespace}</public-uri>
-            <file>urn:java:class:org.exist.uuid.${example.module.java.classname}</file>
+            <public-uri>${uuid.module.namespace}</public-uri>
+            <file>urn:java:class:org.exist.uuid.${uuid.module.java.classname}</file>
         </resource>
     </components>
 
