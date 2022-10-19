@@ -13,7 +13,7 @@
 
     <groupId>org.exist-db</groupId>
     <artifactId>exist-alt-identifier</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 
     <name>Alternate Unique Identifier Library</name>
     <description>Library module for alternate generated unique identifiers</description>
